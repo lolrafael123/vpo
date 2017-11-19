@@ -42,3 +42,17 @@ Route::group(['prefix' => 'posts'], function () {
         ->name('publish_post')
         ->middleware('can:publish-post');
 });
+
+Route::post('/enviar','ContatoController@enviaContato'); 
+
+Route::get('/aluno', function () {
+    return view('partials.aluno');
+});
+
+Route::get('/professor', function () {
+    return view('partials.professor');
+});
+
+Route::get('/formprof', function () {
+    return view('partials.professorform');
+});
